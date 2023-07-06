@@ -76,13 +76,13 @@ while(input!=5){
 public static String inputNewItemName(){
 		String itemName;
 		Scanner scan = new Scanner(System.in);
-		itemName=scan.next();
+		itemName=scan.nextLine();
 		return itemName;
 }
 	public static String inputNewItemSerial(){
 		String itemSerialNumber;
 		Scanner scan = new Scanner(System.in);
-		itemSerialNumber=scan.next();
+		itemSerialNumber=scan.nextLine();
 		return itemSerialNumber;
 	}
 	public static int inputNewItemValue(){
