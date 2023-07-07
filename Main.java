@@ -29,14 +29,10 @@ while(input!=5){
 	input=in.nextInt();
 	if(input==1){
 		System.out.println("Enter the name:");
-        //userList.name=in.next();
         userList.name=inputNewItemName();
-
 		System.out.println("Enter the serial number:");
-		//userList.serialNumber=in.next();
 		userList.serialNumber=inputNewItemSerial();
 		System.out.println("Enter the value in dollars (whole number):");
-		//userList.value=in.nextInt();
 		userList.value=inputNewItemValue();
 		elements.add(new Inventory(userList.name,userList.serialNumber,userList.value));
 	}
@@ -58,7 +54,7 @@ while(input!=5){
 			if (currentItem.serialNumber.equals(userList.serialNumber)) {
 				System.out.println("Enter the new name:");
 				userList.name = inputNewItemName();
-				System.out.println("Enter the new value in dollars (whole numbers):");
+				System.out.println("Enter the new value in dollars (whole number):");
 				userList.value = inputNewItemValue();
 				currentItem.name = userList.name;
 				currentItem.value = userList.value;
@@ -97,7 +93,7 @@ public static String inputNewItemName(){
 		System.out.println("Press 1 to add an item.");
 		System.out.println("Press 2 to delete an item.");
 		System.out.println("Press 3 to update an item.");
-		System.out.println("Press 4 to show all items.");
+		System.out.println("Press 4 to show all the items.");
 		System.out.println("Press 5 to quit the program.");
 	}
 }
