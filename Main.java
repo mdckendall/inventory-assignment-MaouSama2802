@@ -27,6 +27,7 @@ int input=0;
 while(input!=5){
 	questions();
 	input=in.nextInt();
+  in.nextLine();
 	if(input==1){
 		System.out.println("Enter the name:");
         userList.name=inputNewItemName();
@@ -34,6 +35,7 @@ while(input!=5){
 		userList.serialNumber=inputNewItemSerial();
 		System.out.println("Enter the value in dollars (whole number):");
 		userList.value=inputNewItemValue();
+    in.nextLine();
 		elements.add(new Inventory(userList.name,userList.serialNumber,userList.value));
 	}
 	else if(input==2){
@@ -55,6 +57,7 @@ while(input!=5){
 				System.out.println("Enter the new name:");
 				userList.name = inputNewItemName();
 				System.out.println("Enter the new value in dollars (whole number):");
+        in.nextLine();
 				userList.value = inputNewItemValue();
 				currentItem.name = userList.name;
 				currentItem.value = userList.value;
@@ -66,6 +69,9 @@ while(input!=5){
 			System.out.println(element.toString());
 		}
 	}
+  else{
+    System.out.println("please select a valid number");
+  }
 }
 
 	}
