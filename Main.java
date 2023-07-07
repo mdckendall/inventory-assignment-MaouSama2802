@@ -4,10 +4,10 @@ class Inventory {
      String name;
      String serialNumber;
      int value;
-	public Inventory(String name, String serialNumber, int value) {
-		this.name = name;
-		this.serialNumber=serialNumber;
-		this.value=value;
+	Inventory(String a, String b, int c){
+		name = a;
+		serialNumber = b;
+		value = c;
 	}
 	@Override
 	public String toString(){
@@ -27,15 +27,14 @@ int input=0;
 while(input!=5){
 	questions();
 	input=in.nextInt();
-  in.nextLine();
 	if(input==1){
 		System.out.println("Enter the name:");
         userList.name=inputNewItemName();
+
 		System.out.println("Enter the serial number:");
 		userList.serialNumber=inputNewItemSerial();
 		System.out.println("Enter the value in dollars (whole number):");
 		userList.value=inputNewItemValue();
-    in.nextLine();
 		elements.add(new Inventory(userList.name,userList.serialNumber,userList.value));
 	}
 	else if(input==2){
@@ -56,8 +55,7 @@ while(input!=5){
 			if (currentItem.serialNumber.equals(userList.serialNumber)) {
 				System.out.println("Enter the new name:");
 				userList.name = inputNewItemName();
-				System.out.println("Enter the new value in dollars (whole number):");
-        in.nextLine();
+				System.out.println("Enter the new value in dollars (whole numbers):");
 				userList.value = inputNewItemValue();
 				currentItem.name = userList.name;
 				currentItem.value = userList.value;
@@ -69,9 +67,6 @@ while(input!=5){
 			System.out.println(element.toString());
 		}
 	}
-  else{
-    System.out.println("please select a valid number");
-  }
 }
 
 	}
@@ -99,7 +94,7 @@ public static String inputNewItemName(){
 		System.out.println("Press 1 to add an item.");
 		System.out.println("Press 2 to delete an item.");
 		System.out.println("Press 3 to update an item.");
-		System.out.println("Press 4 to show all the items.");
+		System.out.println("Press 4 to show all items.");
 		System.out.println("Press 5 to quit the program.");
 	}
 }
